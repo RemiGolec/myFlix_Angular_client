@@ -168,7 +168,7 @@ export class FetchApiDataService {
 
 
 
-  // -----------------------------------   edit user details
+  // -----------------------------------   edit existing user details
   editUser(updateDetails: any): Observable<any> {
     // Get Authorization token stored in local storage
     const token = localStorage.getItem('token');
@@ -225,7 +225,4 @@ export class FetchApiDataService {
     return throwError(
       'Something bad happened; please try again later.');
   }
-
-
-
 }
