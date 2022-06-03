@@ -168,11 +168,9 @@ export class FetchApiDataService {
 
 
 
-  // -----------------------------------   edit existing user details
+  // -----------------------------------   edit an existing user details
   editUser(updateDetails: any): Observable<any> {
-    // Get Authorization token stored in local storage
     const token = localStorage.getItem('token');
-    // Get Username stored in local storage
     const username = localStorage.getItem('user');
     return this.http
       .put(apiUrl + `users/${username}`, updateDetails, {
