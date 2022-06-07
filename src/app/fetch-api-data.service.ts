@@ -11,13 +11,13 @@ const apiUrl = 'https://morning-badlands-52426.herokuapp.com/';
 })
 export class FetchApiDataService {
 
-  constructor(private https: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   // -----------------------------------   calls API endpoint to register new user
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
-    return this.https
+    return this.http
       .post(apiUrl + 'users', userDetails)
       .pipe(
         catchError(this.handleError)
