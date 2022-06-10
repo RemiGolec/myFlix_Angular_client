@@ -31,10 +31,14 @@ export class MovieCardComponent {
     });
   }
 
-  openMovieGenreDialog(): void {
+  openMovieGenreDialog(name: string, description: string): void {
     this.dialog.open(MovieGenreComponent, {
+      data: {
+        Name: name,
+        Description: description,
+      },
       width: '500px'
-    })
+    });
   }
 
 }
