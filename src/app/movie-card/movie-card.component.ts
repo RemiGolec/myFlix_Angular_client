@@ -3,6 +3,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MovieGenreComponent } from '../movie-genre/movie-genre.component';
 import { MovieSynopsisComponent } from '../movie-synopsis/movie-synopsis.component';
+import { MovieDirectorComponent } from '../movie-director/movie-director.component';
 
 
 
@@ -52,6 +53,17 @@ export class MovieCardComponent {
       width: '500px'
     })
   }
+
+  openMovieDirectorDialog(name: string, bio: string): void {
+    this.dialog.open(MovieDirectorComponent, {
+      data: {
+        Name: name,
+        Bio: bio
+      },
+      width: '500px'
+    })
+  }
+
 }
 
 
