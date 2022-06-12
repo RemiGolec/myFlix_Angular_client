@@ -9,13 +9,15 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    padding: 3em
+    padding: 3em 4em;
+    width: min-content
 }
 
-.welcome-card-header {
-    display: flex;
-    justify-content: center;
-}
+// .welcome-card-header {
+//     display: flex;
+//     justify-content: center;
+//     width: 50px;
+// }
 
 .mat-card>.mat-card-actions:last-child {
     margin-bottom: -8px;
