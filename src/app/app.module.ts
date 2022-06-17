@@ -21,6 +21,9 @@ import { MovieGenreComponent } from './movie-genre/movie-genre.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MovieSynopsisComponent } from './movie-synopsis/movie-synopsis.component';
 import { MovieDirectorComponent } from './movie-director/movie-director.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -37,7 +40,9 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     MovieGenreComponent,
     MovieSynopsisComponent,
-    MovieDirectorComponent
+    MovieDirectorComponent,
+    UserProfileComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,8 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     RouterModule.forRoot(appRoutes),
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
