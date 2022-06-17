@@ -1,5 +1,5 @@
 .bg {
-    background: url("../../assets/img/logo.svg");
+    // background: url("../../assets/img/logo.svg");
     background-size: cover;
     position: absolute;
     top: 89px;
@@ -12,17 +12,6 @@
     margin: auto;
     // animation: animBkgndLRG 240s linear alternate infinite;
 }
-
-@keyframes animBkgndLRG {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -13800px 8300px;
-    }
-}
-
 
 body {
     background-color: #0e0026;
@@ -49,9 +38,23 @@ body {
     box-shadow: none;
 }
 
+.mat-card-image {
+    animation: imageBlur 6s ease-out;
+}
+
+@keyframes imageBlur {
+    0% {
+        filter: blur(30px);
+    }
+
+    100% {
+        filter: blur(0px);
+
+    }
+}
+
 .mat-card>.mat-card-actions:last-child {
     margin-bottom: -8px;
-    margin-top: 50px;
     padding-bottom: 0;
     display: flex;
     justify-content: center;
