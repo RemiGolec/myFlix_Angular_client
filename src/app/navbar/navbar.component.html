@@ -6,7 +6,7 @@
         <h1>MyFlix</h1>
         <span class="menu-spacer"></span>
         <a mat-button (click)="openUserProfile()">User Profile</a>
-        <a mat-button [routerLink]="'/Movies'">Movies</a>
-        <a mat-button [routerLink]="'/WelcomeScreen'">Log Out</a>
+        <a mat-button (click)="goToMovies()">Movies</a>
+        <a mat-button (click)="LogOut()">Log Out</a>
     </mat-toolbar-row>
 </mat-toolbar>
