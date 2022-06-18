@@ -24,6 +24,10 @@ import { MovieDirectorComponent } from './movie-director/movie-director.componen
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HomeComponentComponent } from './home-component/home-component.component';
+import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
+import { HomeComponentNotMyFlixComponent } from './home-component-not-my-flix/home-component-not-my-flix.component';
+import { NotFoundComponentNotMyFlixComponent } from './not-found-component-not-my-flix/not-found-component-not-my-flix.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -42,7 +46,11 @@ const appRoutes: Routes = [
     MovieSynopsisComponent,
     MovieDirectorComponent,
     UserProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponentComponent,
+    NotFoundComponentComponent,
+    HomeComponentNotMyFlixComponent,
+    NotFoundComponentNotMyFlixComponent
   ],
   imports: [
     BrowserModule,
