@@ -1,15 +1,37 @@
-<p>user-profile works!</p>
-<mat-card style="box-shadow: none;">
-    <mat-card-title>
-        <!-- {{ data.Name }} -->
-    </mat-card-title>
-    <br />
-    <mat-dialog-content class="genre-dialog-content">
-        <!-- <b>Bio: </b>{{ data.Bio }} -->
-    </mat-dialog-content>
-    <br />
-    <mat-dialog-content style="text-align: right">
-        <mat-icon mat-dialog-close>movie</mat-icon>
-        <mat-icon mat-dialog-close>arrow_back</mat-icon>
-    </mat-dialog-content>
-</mat-card>
+<app-navbar></app-navbar>
+<div class="user-profile-page">
+    <!-- User Profile -->
+    <mat-card class="user-profile-card">
+        <mat-card-header class="user-profile-card-header">
+            <mat-card-title>Profile Information</mat-card-title>
+        </mat-card-header>
+
+        <!-- View Profile Information -->
+        <mat-card-content class="user-profile-card-content">
+            <p><b>Username:</b> {{user.Username}}</p>
+            <p><b>Email:</b> {{user.Email}}</p>
+            <p><b>Birthday:</b> {{user.Birthday | date }}</p>
+        </mat-card-content>
+
+        <!-- Edit Profile Information & Delete Profile -->
+        <mat-card-actions class="user-profile-actions">
+
+            <button mat-raised-button color="primary">
+                <!-- <button mat-raised-button (click)="openEditProfileDialog()" color="primary"> -->
+                <mat-icon>edit</mat-icon>
+                Edit Profile
+            </button>
+            <button mat-raised-button color="warn">
+                <!-- <button mat-raised-button (click)="deleteProfile()" color="warn"> -->
+                <mat-icon>delete_forever</mat-icon>
+                Delete Profile
+            </button>
+            <mat-dialog-content style="text-align: right">
+                <mat-icon mat-dialog-close>movie</mat-icon>
+                <mat-icon mat-dialog-close>arrow_back</mat-icon>
+            </mat-dialog-content>
+
+        </mat-card-actions>
+    </mat-card>
+    <!-- Display Favorite Movies -->
+</div>

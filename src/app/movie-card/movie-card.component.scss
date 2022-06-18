@@ -1,10 +1,12 @@
+$backgroundColor: #d3d0da;
+
 .movie-view {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px 0;
-    // background-color: $backgroundColor;
+    background-color: $backgroundColor;
 }
 
 .mat-card {

@@ -1,0 +1,20 @@
+$backgroundColor: #d3d0da;
+
+.user-profile-page {
+    background-color: $backgroundColor;
+    display: flex;
+}
+
+.mat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // box-shadow: 10px 5px 5px $boxShadowColor;
+    // background-color: $cardColor;
+    max-width: 280px;
+    width: 280px;
+    margin: 15px;
+    padding: 20px 3px;
+}
