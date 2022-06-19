@@ -96,9 +96,16 @@ body {
 
 }
 
-button.mat-primary,
-.mat-fab.mat-primary,
-.mat-mini-fab.mat-primary {
-    background-color: rgba(255, 255, 255, 0.803);
-    color: black;
+.signUpButton {
+    background-color: #f50;
+    border-color: #f50;
+    color: #fff;
+    padding: 2px 16px;
+}
+
+.loginButton {
+    background: #b3adbb;
+    color: #0e0026;
+    border: 1px solid #b3acbb;
+    padding: 2px 16px;
 }

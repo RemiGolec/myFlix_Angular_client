@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardActions } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
@@ -24,6 +25,8 @@ import { MovieDirectorComponent } from './movie-director/movie-director.componen
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -43,7 +46,8 @@ const appRoutes: Routes = [
     MovieSynopsisComponent,
     MovieDirectorComponent,
     UserProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

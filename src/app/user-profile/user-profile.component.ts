@@ -3,7 +3,8 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { EditProfileComponent } from '../edit-profile/edit-profile.component';
+
 
 
 @Component({
@@ -15,10 +16,6 @@ export class UserProfileComponent implements OnInit {
   user: any = {};
 
   constructor(
-    // @Inject(MAT_DIALOG_DATA)
-    // public data: {
-    //   Name: string,
-    // },
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
     public router: Router,
@@ -36,5 +33,26 @@ export class UserProfileComponent implements OnInit {
       return this.user;
     })
   }
+
+  openEditProfileDialog(): void {
+    this.dialog.open(EditProfileComponent, {
+      width: '300px'
+    })
+  }
+
+  deleteProfile(): void {
+    if (confirm('Please confirm you want to delete your profile? This cannot be undone.')) {
+      this.router.navigate(['welcome']).then(() => {
+        this.snackBar.open('You have successfully deleted your account!', 'OK', {
+          duration: 2000
+        });
+      })
+      this.fetchApiData.deleteUser().subscribe((result) => {
+        console.log(result);
+        localStorage.clear();
+      })
+    }
+  }
+
 
 }
