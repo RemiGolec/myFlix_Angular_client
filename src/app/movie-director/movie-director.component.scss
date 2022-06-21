@@ -1,0 +1,18 @@
+.movie-director-card {
+    width: min-content;
+    background-color: #1a0046;
+    color: #e8dcec;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 3em;
+    border-radius: 10px;
+}
+
+.movie-director-card::after {
+    content: "";
+    display: block;
+    height: 0.1em;
+    background-color: #e1bee7;
+    margin-top: 1em;
+}

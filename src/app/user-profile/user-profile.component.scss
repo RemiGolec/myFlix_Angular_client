@@ -3,18 +3,23 @@ $backgroundColor: #d3d0da;
 .user-profile-page {
     background-color: $backgroundColor;
     display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 
-.mat-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    // box-shadow: 10px 5px 5px $boxShadowColor;
-    // background-color: $cardColor;
-    max-width: 280px;
-    width: 280px;
-    margin: 15px;
-    padding: 20px 3px;
+.user-profile-card {
+    margin-top: 64px;
+    padding: 28px;
+    height: fit-content;
+}
+
+.bg {
+    background: url("../../assets/img/background_Desktop_SC.svg");
+    background-size: 1647px;
+    position: absolute;
+    top: 165px;
+    left: -122px;
+    right: 0px;
+    bottom: 0px;
+    background-repeat: no-repeat;
 }
