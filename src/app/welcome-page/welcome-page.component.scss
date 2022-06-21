@@ -40,6 +40,10 @@ body {
 
 .mat-card-image {
     animation: imageBlur 3s ease-out;
+    width: 184%;
+    margin: 14px -88px;
+    display: block;
+    overflow: hidden;
 }
 
 @keyframes imageBlur {
@@ -51,6 +55,10 @@ body {
         filter: blur(0px);
 
     }
+}
+
+.mat-card-image:first-child {
+    margin-top: 54px;
 }
 
 .mat-card>.mat-card-actions:last-child {
