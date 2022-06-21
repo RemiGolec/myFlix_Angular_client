@@ -40,6 +40,10 @@ body {
 
 .mat-card-image {
     animation: imageBlur 3s ease-out;
+    width: calc(150%);
+    margin: 0 -58px;
+    display: block;
+    overflow: hidden;
 }
 
 @keyframes imageBlur {
