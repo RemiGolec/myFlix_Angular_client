@@ -47,7 +47,7 @@ const appRoutes: Routes = [
     MovieDirectorComponent,
     UserProfileComponent,
     NavbarComponent,
-    EditProfileComponent
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
