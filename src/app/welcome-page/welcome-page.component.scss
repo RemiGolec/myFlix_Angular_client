@@ -109,11 +109,13 @@ body {
     border-color: #f50;
     color: #fff;
     padding: 2px 16px;
+    box-shadow: none;
 }
 
 .loginButton {
-    background: #b3adbb;
-    color: #0e0026;
-    border: 1px solid #b3acbb;
+    background: #00000000;
+    color: #000000;
+    border: 1px solid #000000;
     padding: 2px 16px;
+    box-shadow: none;
 }
