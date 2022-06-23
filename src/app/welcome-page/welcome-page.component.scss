@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #b0b4c9;
+    background-color: #c1cbbd;
 }
 
 .welcome-page {
@@ -39,7 +39,8 @@ body {
 
 .mat-card-image {
     animation: imageBlur 3s ease-out;
-    width: 131%;
+    width: 80vw;
+    max-width: 540px;
     margin: 14px -33px;
     display: block;
     overflow: hidden;
@@ -104,17 +105,17 @@ body {
 }
 
 .signUpButton {
-    background-color: #f50;
-    border-color: #f50;
+    background-color: #07a916;
+    border-color: #07a916;
     color: #fff;
     padding: 2px 16px;
     box-shadow: none;
 }
 
 .loginButton {
-    background: #00000000;
-    color: #000000;
-    border: 1px solid #000000;
+    background: #727c6d;
+    color: #ffffff;
+    border: 1px solid #5a6456;
     padding: 2px 16px;
     box-shadow: none;
 }
