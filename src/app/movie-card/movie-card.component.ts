@@ -29,6 +29,11 @@ export class MovieCardComponent {
     this.getFavouriteMovies();
   }
 
+  /**
+   * Gets movies from api call and sets the movies state to return JSON file
+   * @returns array holding movies objects
+   * @function getAllMovies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -37,6 +42,11 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * Gets favorite movies from api call and sets the favorite movies variable to return JSON file
+   * @returns array holding ids of user's favorite movies
+   * @function getFavoriteMovies
+   */
   getFavouriteMovies(): void {
     const user = localStorage.getItem('user');
     this.fetchApiData.getUser().subscribe((resp: any) => {
@@ -45,10 +55,20 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * checks if a movie is included in the user's list of favorite movies
+   * @param id 
+   * @returns true, if the movie is a favorite move, else false
+   */
   isFavourite(id: string): boolean {
     return this.favouriteMovies.some((movieId) => movieId === id);
   }
 
+  /**
+   * adds a movie to the list of favourite movies via an API call
+   * @param id 
+   * @function addToFavourites
+   */
   addToFavourites(id: string): void {
     this.fetchApiData.addFavouriteMovie(id).subscribe((resp: any) => {
       this.snackBar.open(`movie has been added to your favourites`, 'OK', {
@@ -58,6 +78,11 @@ export class MovieCardComponent {
     })
   }
 
+  /**
+   * removes movie from the list of favourite movies via an API call
+   * @param id 
+   * @function removeFromFavourites
+   */
   removeFromFavourites(id: string): void {
     this.fetchApiData.removeFavoriteMovie(id).subscribe((resp: any) => {
       this.snackBar.open(`movie has been deleted from your favourites`, 'OK', {
@@ -67,6 +92,12 @@ export class MovieCardComponent {
     })
   }
 
+  /**
+   * opens the user genre dialog from Movie-Genre Component to displaying details
+   * @param name 
+   * @param description 
+   * @function openMovieGenreDialog
+   */
   openMovieGenreDialog(name: string, description: string): void {
     this.dialog.open(MovieGenreComponent, {
       data: {
@@ -77,6 +108,12 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * opens movie storyline dialog from movie-Synopsis Component to display details
+   * @param title 
+   * @param description 
+   * @function openMovieSynopsisDialog
+   */
   openMovieSynopsisDialog(title: string, description: string): void {
     this.dialog.open(MovieSynopsisComponent, {
       data: {
@@ -87,6 +124,12 @@ export class MovieCardComponent {
     })
   }
 
+  /**
+   * opens movie director bio dialog from movie-director to display details
+   * @param name 
+   * @param bio 
+   * @function openMovieDirectorDialog
+   */
   openMovieDirectorDialog(name: string, bio: string): void {
     this.dialog.open(MovieDirectorComponent, {
       data: {

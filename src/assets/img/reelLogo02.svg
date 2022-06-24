@@ -20,26 +20,43 @@
         fill: none;
         stroke: #ffffff;
         stroke-dasharray: 454.0306396484375;
-        animation: draw_yFlix 6s forwards linear;
+        animation: draw_yFlix 20s forwards linear infinite;
       }
 
       @keyframes draw_yFlix {
         0% {
           stroke-dashoffset: 454; 
           fill: #ffffff;
+          stroke: #c1cbbd;
           fill-opacity: 0;
           stroke-dasharray: 454;
         }
-        75% {
+        10% {
+          stroke: #ffffff;
+        }
+        25% {
           stroke-dashoffset: 0;
           fill: #ffffff;
           fill-opacity: 0;
           stroke-dasharray: 454; 
         }
-        100% {
+        30% {
           stroke-dashoffset: 0;
           fill: #ffffff;
           fill-opacity: 1;
+          stroke-dasharray: 454;
+        }
+        95% {
+          stroke-dashoffset: 0;
+          fill: #ffffff;
+          stroke: #ffffff;
+          fill-opacity: 1;
+          stroke-dasharray: 454;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          fill: #c1cbbd;
+          stroke: #c1cbbd;
           stroke-dasharray: 454;
         }
       }

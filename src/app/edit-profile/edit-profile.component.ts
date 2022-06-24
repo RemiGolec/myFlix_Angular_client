@@ -23,6 +23,10 @@ export class EditProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  /**
+   * allowes user to edit their credentials: Username, Password, Email, Birthday
+   */
   editUser(): void {
     console.log(this.userData);
     this.fetchApiData.editUser(this.userData).subscribe((result) => {
@@ -32,6 +36,7 @@ export class EditProfileComponent implements OnInit {
       this.snackBar.open('Successfully updated profile!', 'OK', {
         duration: 2000
       });
+      // reload location after user data updates
       setTimeout(() => {
         window.location.reload();
       });

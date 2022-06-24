@@ -24,15 +24,12 @@ body {
 }
 
 .mat-card-image {
-    animation: imageBlur 3s ease-out;
     width: 80vw;
     max-width: 540px;
     margin: 14px -33px;
     display: block;
     overflow: hidden;
 }
-
-@keyframes imageBlur {}
 
 .mat-card-image:first-child {
     margin-top: 54px;
