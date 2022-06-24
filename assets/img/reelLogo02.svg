@@ -11,6 +11,37 @@
 
       .cls-3 {
         fill: #ffffff;
+        stroke: #ffffff;
+        stroke-width: 1;
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-dasharray: 454.0306396484375;
+        animation: draw_yFlix 6s forwards linear;
+      }
+
+      @keyframes draw_yFlix {
+        0% {
+          stroke-dashoffset: 454; 
+          fill: #ffffff;
+          fill-opacity: 0;
+          stroke-dasharray: 454;
+        }
+        75% {
+          stroke-dashoffset: 0;
+          fill: #ffffff;
+          fill-opacity: 0;
+          stroke-dasharray: 454; 
+        }
+        100% {
+          stroke-dashoffset: 0;
+          fill: #ffffff;
+          fill-opacity: 1;
+          stroke-dasharray: 454;
+        }
       }
     </style>
   </defs>
