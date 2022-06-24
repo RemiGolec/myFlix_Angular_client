@@ -1,17 +1,3 @@
-.bg {
-    background-size: cover;
-    position: absolute;
-    top: 89px;
-    left: -86px;
-    right: 0px;
-    bottom: 0px;
-    background-repeat: no-repeat;
-    filter: blur(9px);
-    z-index: 0;
-    margin: auto;
-    // animation: animBkgndLRG 240s linear alternate infinite;
-}
-
 body {
     background-color: #c1cbbd;
 }
@@ -46,16 +32,7 @@ body {
     overflow: hidden;
 }
 
-@keyframes imageBlur {
-    0% {
-        filter: blur(50px);
-    }
-
-    100% {
-        filter: blur(0px);
-
-    }
-}
+@keyframes imageBlur {}
 
 .mat-card-image:first-child {
     margin-top: 54px;
@@ -65,43 +42,6 @@ body {
     padding-bottom: 0;
     display: flex;
     justify-content: center;
-}
-
-.title {
-    font-weight: bolder;
-    font-size: 88px;
-    color: white;
-    margin-bottom: 79px;
-    animation: imageBlur 2s ease-out;
-}
-
-.sub-header {
-    font-weight: bolder;
-    font-size: 30px;
-    color: #ffffffc2;
-    margin-bottom: 28px;
-    margin-left: 5px;
-    opacity: 0.9;
-    animation: show 5s;
-}
-
-@keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    70% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.9;
-    }
-
 }
 
 .signUpButton {
