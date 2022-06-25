@@ -21,16 +21,22 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // This is the function responsible for sending the form inputs to the backend
+  /**
+   * sends the login form inputs to the backend
+   * @function loginUser  
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
       console.log(response);
+      // add user name and token to local Storage
       localStorage.setItem('user', response.user.Username);
       localStorage.setItem('token', response.token);
-      this.dialogRef.close(); // This will close the modal on success!
+      // This will close the modal on success
+      this.dialogRef.close();
       this.snackBar.open(response, 'OK', {
         duration: 2000
       });
+      // redirects to main page (movies) with movie-cards
       this.router.navigate(['movies']);
     }, (response) => {
       console.log(response);
