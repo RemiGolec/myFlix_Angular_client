@@ -23,6 +23,8 @@
         animation: draw_yFlix 20s forwards linear infinite;
       }
 
+      <!-- LOGO animation -->
+      
       @keyframes draw_yFlix {
         0% {
           stroke-dashoffset: 454; 
